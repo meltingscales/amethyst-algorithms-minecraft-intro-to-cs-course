@@ -8,7 +8,7 @@ in sha' Allah 2025 I get to teach at a university
 
 This course is meant to get you up to speed with many different important computer science topics using the game Minecraft as a substrate.
 
-You'll learn basic Java syntax, how to set up an editor, how to run Java code, and slowly get more advanced until you're creating new items, new mobs, new world-generation, and 
+You'll learn basic Java syntax, how to set up an editor, how to run Java code, and slowly get more advanced until you're creating new items, new mobs, new world-generation, and more advanced concepts like custom GUIs, abstraction, interfaces, profiling, runtime complexity, 3d model editing, and more!
 
 ## topics
 
