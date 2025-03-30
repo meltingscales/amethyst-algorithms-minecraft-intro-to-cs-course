@@ -4,6 +4,12 @@ my desire to teach and love of minecraft all rolled into one
 
 in sha' Allah 2025 I get to teach at a university
 
+## summary
+
+This course is meant to get you up to speed with many different important computer science topics using the game Minecraft as a substrate.
+
+You'll learn basic Java syntax, how to set up an editor, how to run Java code, and slowly get more advanced until you're creating new items, new mobs, new world-generation, and 
+
 ## topics
 
 ### easy
