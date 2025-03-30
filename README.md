@@ -1,5 +1,7 @@
 # Amethyst Algorithms: Minecraft Intro to CS Course
 
+![Amethyst Algorithms](amethyst-algorithms.png)
+
 my desire to teach and love of minecraft all rolled into one
 
 in sha' Allah 2025 I get to teach at a university
