@@ -45,3 +45,4 @@ bin/
 run/logs/
 run/downloads/
 run/crash-reports/
+run/saves
