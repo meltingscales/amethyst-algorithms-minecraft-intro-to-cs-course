@@ -6,6 +6,19 @@ We need to make sure you're able to build your minecraft mod and play it.
 
 We also want to make sure you've got tools to debug and diagnose code within Minecraft.
 
+I don't like boring students with annoying setup, so this is meant to be as easy for you as possible.
+HOWEVER: In real life, "annoying technology setup" will very much smack you in the face and steal your purse, and make you step on a lego. 
+
+It would be wise to learn through trial and error how to create this stub from scratch as an extra project.
+
+## How did you create this stub?
+
+I just read `moddevgradle` documentation and fiddled with Java versions until it worked.
+
+## What else can i do with `moddevgradle`?
+
+Run `./gradlew -q :tasks --all` and read!
+
 ## Tools
 
 - IntelliJ IDEA
@@ -18,5 +31,6 @@ We also want to make sure you've got tools to debug and diagnose code within Min
 ## Steps
 
 1. Import the project `amethyst-algorithms-1-ide-setup` into IntelliJ IDEA.
-2. Run `./gradlew neoforge` to sync NeoForge with your IDE. Note that this will add "Run" configurations that can be used to launch Minecraft.
-3. 
+2. Run `./gradlew neoforge neoForgeIdeSync` to sync NeoForge with your IDE. Note that this will add "Run" configurations that can be used to launch Minecraft.
+3. Now, use the "Play" button at the top-right to launch a client or server.
+   - Or, just run `./gradlew clean cleanRunClient runClient`.

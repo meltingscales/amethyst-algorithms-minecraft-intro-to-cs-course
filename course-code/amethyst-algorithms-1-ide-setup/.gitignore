@@ -44,3 +44,4 @@ bin/
 # minecraft crust
 run/logs/
 run/downloads/
+run/crash-reports/

@@ -1,19 +1,17 @@
 package io.meltingscales;
 
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.fml.javafmlmod.FMLModContainer;
 import net.neoforged.neoforge.common.NeoForge;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@Mod("hello_world")
-public class HelloWorldMod {
+@Mod("amethyst_algorithms_hello_world")
+public class AmethystAlgorithmsHelloWorldMod {
     // Logger instance for logging messages
-    private static final Logger LOGGER = LoggerFactory.getLogger(HelloWorldMod.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(AmethystAlgorithmsHelloWorldMod.class);
 
-    public HelloWorldMod() {
+    public AmethystAlgorithmsHelloWorldMod() {
         // Register setup methods for the mod
         NeoForge.EVENT_BUS.addListener(this::onCommonSetup);
     }
