@@ -17,6 +17,8 @@ I just read `moddevgradle` documentation and fiddled with Java versions until it
 
 I then realized I failed, and realized I needed to use <https://neoforged.net/mod-generator/> after chatting on The NeoForge Project discord channel.
 
+You should just use <https://neoforged.net/mod-generator/> to generate a stub like this.
+
 ## What else can i do with `moddevgradle`?
 
 Run `./gradlew -q :tasks --all` and read!
@@ -29,6 +31,7 @@ Run `./gradlew -q :tasks --all` and read!
 - Gradle
 - NeoForge
   - [moddevgradle (READ THIS)](https://projects.neoforged.net/neoforged/moddevgradle)
+  - https://neoforged.net/mod-generator/
 
 ## Steps
 
