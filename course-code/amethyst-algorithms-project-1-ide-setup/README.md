@@ -1,4 +1,4 @@
-# Amethyst Algorithms 1: IDE Setup
+# Amethyst Algorithms Project 1: IDE Setup
 
 This part of Amethyst Algorithms is just focused on IDE and tooling setup.
 
