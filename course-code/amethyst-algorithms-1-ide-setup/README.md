@@ -13,7 +13,9 @@ It would be wise to learn through trial and error how to create this stub from s
 
 ## How did you create this stub?
 
-I just read `moddevgradle` documentation and fiddled with Java versions until it worked.
+I just read `moddevgradle` documentation and fiddled with Java versions until it almost worked.
+
+I then realized I failed, and realized I needed to use <https://neoforged.net/mod-generator/> after chatting on The NeoForge Project discord channel.
 
 ## What else can i do with `moddevgradle`?
 
