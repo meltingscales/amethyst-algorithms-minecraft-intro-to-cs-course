@@ -5,11 +5,13 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.level.BlockEvent;
 
+@EventBusSubscriber(modid = AmethystAlgorithmsProject1.MODID, bus = EventBusSubscriber.Bus.GAME)
 public class BlockBreakListener {
-  @SubscribeEvent
-  public void onBlockBreak(BlockEvent.BreakEvent event) {
+  @SubscribeEvent(receiveCanceled = true)
+  public static void onBlockBreak(BlockEvent.BreakEvent event) {
     // Get the block state and position
     BlockState state = event.getState();
     BlockPos pos = event.getPos();
