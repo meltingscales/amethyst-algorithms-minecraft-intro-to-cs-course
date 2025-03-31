@@ -3,6 +3,26 @@ plugins {
     id 'maven-publish'
     id 'net.neoforged.moddev' version '2.0.80'
     id 'idea'
+
+    // code formatter
+    id 'com.diffplug.spotless' version '7.0.2'
+
+}
+
+// code formatter
+spotless {
+    java {
+        googleJavaFormat()
+        removeUnusedImports()
+        trimTrailingWhitespace()
+        endWithNewline()
+    }
+}
+
+// Ensure Spotless runs before the compilation process
+// This way we always have well-formatted code
+tasks.named('compileJava').configure {
+    dependsOn tasks.named('spotlessApply')
 }
 
 tasks.named('wrapper', Wrapper).configure {

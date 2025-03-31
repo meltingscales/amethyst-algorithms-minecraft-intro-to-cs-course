@@ -39,3 +39,11 @@ Run `./gradlew -q :tasks --all` and read!
 2. Run `./gradlew neoforge neoForgeIdeSync` to sync NeoForge with your IDE. Note that this will add "Run" configurations that can be used to launch Minecraft.
 3. Now, use the "Play" button at the top-right to launch a client or server.
    - Or, just run `./gradlew clean cleanRunClient runClient`.
+
+## Extra
+
+### Code formatting
+
+```bash
+./gradlew spotlessApply
+```
