@@ -46,3 +46,4 @@ run/logs/
 run/downloads/
 run/crash-reports/
 run/saves
+run/usercache.json
