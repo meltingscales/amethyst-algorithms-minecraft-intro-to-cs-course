@@ -39,5 +39,5 @@ You'll learn basic Java syntax, how to set up an editor, how to run Java code, a
 - 3d models
 
 ## inspiration
-- "Modding By Kaupenjoe: Minecraft Modding 1.20.X for Forge"
+- [Modding By Kaupenjoe: Minecraft Modding 1.20.X for Forge](https://www.udemy.com/course/minecraft-modding-120x-for-forge)
 - over 20,000 hours into this glorious game
