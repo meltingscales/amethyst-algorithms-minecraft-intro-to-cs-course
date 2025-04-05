@@ -1,4 +1,4 @@
-package io.meltingscales.amethystalgorithmsproject1;
+package io.meltingscales.amethystalgorithmsproject2;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.Level;
@@ -8,7 +8,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.level.BlockEvent;
 
-@EventBusSubscriber(modid = AmethystAlgorithmsProject1.MODID, bus = EventBusSubscriber.Bus.GAME)
+@EventBusSubscriber(modid = AmethystAlgorithmsProject2.MODID, bus = EventBusSubscriber.Bus.GAME)
 public class BlockBreakListener {
   @SubscribeEvent(receiveCanceled = true)
   public static void onBlockBreak(BlockEvent.BreakEvent event) {

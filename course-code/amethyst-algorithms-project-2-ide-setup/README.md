@@ -1,4 +1,4 @@
-# Amethyst Algorithms Project 1: IDE Setup
+# Amethyst Algorithms Project 2: IDE Setup
 
 This part of Amethyst Algorithms is just focused on IDE and tooling setup.
 
@@ -71,9 +71,9 @@ Run `./gradlew -q :tasks --all` and read!
 
 ### Find string in file contents
 
-    grep -rnw './' -e 'project1'
+    grep -rnw './' -e 'project2'
 
 ### Find string in file paths
 
-    find . -wholename *project1*
+    find . -wholename *project2*
 

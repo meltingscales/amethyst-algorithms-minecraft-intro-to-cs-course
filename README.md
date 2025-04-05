@@ -51,30 +51,33 @@ You'll learn basic Java syntax, how to set up an editor, how to run Java code, a
 
 ## course overview
 
-### project 1: IDE Setup
+### project 1: coding basics
 
-- why are we using a very advanced editor?
-- how do we debug?
-- what is gradle?
--
-- why are we doing IDE setup before language basics?
-
-### project 2: coding basics
+if you already know this, please skip ahead.
 
 TODO add <https://github.com/meltingscales/examples/tree/master/java/>, incorporate it into lessons
 
-- 2.1: [java syntax](https://github.com/meltingscales/examples/blob/master/java/java-basics/src/JavaBasics.java)
-- 2.2: data types: str, float, list, array, char[]
-- 2.3: variables: local, global
-- 2.4: simple statements
-- 2.5: 
-- advanced statements
+- 1.1: [java syntax](https://github.com/meltingscales/examples/blob/master/java/java-basics/src/JavaBasics.java)
+- 1.2: data types: str, float, list, array, char[]
+- 1.3: variables: local, global
+- 1.4: simple statements
+- 1.5: advanced statements
+- 1.6: global functions
+- 1.7: member functions
 - order of evaluation
 - classes
 - why should we use OOP?
 - why is OOP bad sometimes?
 - for loops
 - while loops
+- interfaces
+
+### project 2: IDE Setup
+
+- why are we using a very advanced editor?
+- how do we debug?
+- what is gradle?
+- what is neoforged?
 
 ### project 3: let's make our own tree!
 
@@ -82,7 +85,6 @@ TODO add <https://github.com/meltingscales/examples/tree/master/java/>, incorpor
 - new wood block + texture
 - new leaf block + texture
 - how do we extend the OakTree class?
-- 
 
 ### project 4: let's make our own ore, AmethystOre, a crafting recipe, and an AmethystPickaxe pickaxe item
 
