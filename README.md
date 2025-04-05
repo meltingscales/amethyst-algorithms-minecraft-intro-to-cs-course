@@ -61,26 +61,26 @@ TODO add <https://github.com/meltingscales/examples/tree/master/java/>, incorpor
 - 1.2: data types: str, float, list, array, char[]
 - 1.3: variables: local, global
 - 1.4: simple statements
+- 1.4a: order of evaluation
 - 1.5: advanced statements
 - 1.6: global functions
 - 1.7: member functions
-- order of evaluation
-- classes
-- why should we use OOP?
-- why is OOP bad sometimes?
-- for loops
-- while loops
-- interfaces
+- 1.8: classes
+- 1.9: why should we use OOP?
+- 1.10: why is OOP bad sometimes?
+- 1.11: for loops
+- 1.12: while loops
+- 1.13: interfaces
 
 ### project 2: IDE Setup
 
-- why are we using a very advanced editor?
+- why are we using IntelliJ IDEA?
 - how do we debug?
 - what is gradle?
 - what is neoforged?
+- sample `onBlockBreak` code
 
 ### project 3: let's make our own tree!
-
 
 - new wood block + texture
 - new leaf block + texture
@@ -92,4 +92,5 @@ TODO add <https://github.com/meltingscales/examples/tree/master/java/>, incorpor
 
 ## inspiration
 - [Modding By Kaupenjoe: Minecraft Modding 1.20.X for Forge](https://www.udemy.com/course/minecraft-modding-120x-for-forge)
+  - [course code](https://github.com/Kaupenjoe/Forge-Course-1.20.X)
 - over 20,000 hours into this glorious game
