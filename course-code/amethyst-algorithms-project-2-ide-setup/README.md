@@ -34,11 +34,11 @@ It would be wise to learn through trial and error how to create this stub from s
 
 ## How did you create this stub?
 
-I just read `moddevgradle` documentation and fiddled with Java versions until I thought I got it to work.
+I just read `moddevgradle` documentation and fiddled with Java versions until I thought I got it to work. (DO NOT DO THIS.)
 
 I then saw I was going about it the entirely wrong way, and realized I needed to use <https://neoforged.net/mod-generator/> after chatting on The NeoForge Project discord channel.
 
-You should just use <https://neoforged.net/mod-generator/> to generate a stub like this.
+Instead, you should use <https://neoforged.net/mod-generator/> to generate a stub like this.
 
 ## What else can I do with `moddevgradle`?
 
@@ -52,11 +52,11 @@ Run `./gradlew -q :tasks --all` and read!
 - Gradle
 - NeoForge
   - [moddevgradle (READ THIS)](https://projects.neoforged.net/neoforged/moddevgradle)
-  - <https://neoforged.net/mod-generator/>
+  - Use <https://neoforged.net/mod-generator/> to generate working mod stubs.
 
 ## Steps
 
-1. Import the project `amethyst-algorithms-project-1-ide-setup` into IntelliJ IDEA.
+1. Import the project `amethyst-algorithms-project-2-ide-setup` into IntelliJ IDEA.
 2. Run `./gradlew neoforge neoForgeIdeSync` to sync NeoForge with your IDE. Note that this will add "Run" configurations that can be used to launch Minecraft.
 3. Now, use the "Play" button at the top-right to launch a client or server. Make sure "Client" is your selected run configuration - This will launch the Minecraft client.
    - Or, just run `./gradlew clean cleanRunClient runClient`.

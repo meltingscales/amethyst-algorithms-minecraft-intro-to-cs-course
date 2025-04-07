@@ -9,7 +9,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.level.BlockEvent;
 
 @EventBusSubscriber(modid = AmethystAlgorithms.MODID, bus = EventBusSubscriber.Bus.GAME)
-public class BlockBreakListener {
+public class DirtDropsGold {
   @SubscribeEvent(receiveCanceled = true)
   public static void onBlockBreak(BlockEvent.BreakEvent event) {
     // Get the block state and position
@@ -37,20 +37,6 @@ public class BlockBreakListener {
                   blockPos.getZ() + 0.5,
                   new net.minecraft.world.item.ItemStack(
                       net.minecraft.world.item.Items.GOLD_INGOT)));
-    }
-    // also generate 10 smoke particles for any block break
-
-    for (int i = 0; i < 10; i++) {
-      event
-          .getLevel()
-          .addParticle(
-              net.minecraft.core.particles.ParticleTypes.SMOKE,
-              blockPos.getX(),
-              blockPos.getY(),
-              blockPos.getZ(),
-              0,
-              0,
-              0);
     }
   }
 }

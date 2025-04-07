@@ -36,7 +36,18 @@ Amethyst Algorithms is a course aimed at smart highschoolers or average college 
 
 If you're age 15+, like Minecraft, and want to learn programming, you should give this course a try.
 
-# Java coding basics
+# Tooling setup
 
-We're first going to cover the basics of computer programming using the Java language:
+You'll need to install a few tools first!
 
+1. [Install IntelliJ IDEA](https://www.jetbrains.com/idea/)
+2. [Install Git](https://git-scm.com/)
+3. Install Java Development Kit 21
+    - [Windows Java 21](https://community.chocolatey.org/packages/openjdk/21.0.0)
+    - [Linux/OSX Java 21](https://www.oracle.com/java/technologies/downloads/)
+
+# IDE setup
+
+First, we're going to set up your IDE.
+
+1. Clone 

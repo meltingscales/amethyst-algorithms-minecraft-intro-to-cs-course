@@ -34,9 +34,26 @@ This presentation was made using Markdown and Pandoc with the "beamer" template.
 
 We're going to be using IntelliJ IDEA. Both "Community" and "Ultimate" edition will work.
 
-This is not necessary, but recommended. I prefer IntelliJ IDEA, and if you're a student with a `.edu` or similar email, you can get the "Ultimate" edition for free on their website.
+This is not necessary, but recommended. I prefer IntelliJ IDEA, and if you're a student with a `.edu` or similar email, you can get the "Ultimate" edition for free on their website!
+
+<https://www.jetbrains.com/community/education/>
 
 # Debugging
+
+It's dead simple to debug while coding with an IDE!
+
+In the "Gutter", the left-hand tract of screen space to the right of line numbers in IDEA, you can set what's called a "breakpoint".
+
+If you set one, and run the "Client" run configuration in Debug mode, the game will PAUSE right before it executes the code targeted by a breakpoint! Try it out!
+
+```text
+  vvv -- Right there is the gutter.
+01 | package test.mypackage.com;
+02 | 
+03 | public static void main(String[] args) {
+04 |     System.out.println("Hello world!");
+05 | }
+```
 
 # Java
 
