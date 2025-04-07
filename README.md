@@ -57,6 +57,17 @@ if you already know this, please skip ahead.
 
 TODO add <https://github.com/meltingscales/examples/tree/master/java/>, incorporate it into lessons
 
+- 1.1: setup the IDE
+- 1.2: basic syntax that is ONLY related to minecraft
+- 1.3: basic commands, example: `player.sendMessage("Hello, Minecraft!");` or `world.setBlock(player.getPosition().up(), Blocks.DIAMOND_BLOCK);`
+- 1.4: variables and datatypes, examples:
+  - `String playerName = player.getName();`
+  - `int playerX = player.getPosition().getX();`
+  - `boolean isDay = world.isDaytime();`
+1.5: order of evaluation
+
+
+<!--
 - 1.1: [java syntax](https://github.com/meltingscales/examples/blob/master/java/java-basics/src/JavaBasics.java)
 - 1.2: data types: str, float, list, array, char[]
 - 1.3: variables: local, global
@@ -72,13 +83,15 @@ TODO add <https://github.com/meltingscales/examples/tree/master/java/>, incorpor
 - 1.12: while loops
 - 1.13: interfaces
 
-### project 2: IDE Setup
+-->
+
+### project 2: talk about tooling
 
 - why are we using IntelliJ IDEA?
 - how do we debug?
 - what is gradle?
 - what is neoforged?
-- sample `onBlockBreak` code
+- sample `onBlockBreak` code and gold ingots
 
 ### project 3: let's make our own tree!
 
