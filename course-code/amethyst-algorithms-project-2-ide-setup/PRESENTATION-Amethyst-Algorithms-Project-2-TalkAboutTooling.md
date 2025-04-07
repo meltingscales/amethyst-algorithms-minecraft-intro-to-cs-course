@@ -30,16 +30,18 @@ code -> github.com/meltingscales/amethyst-algorithms
 ```
 This presentation was made using Markdown and Pandoc with the "beamer" template.
 
-# What is this?
-
-Amethyst Algorithms is a course aimed at smart highschoolers or average college students, meant to teach you how to do software programming using Minecraft and NeoForged.
-
-If you're age 15+, like Minecraft, and want to learn programming, you should give this course a try :)
-
 # IDE choice
 
-We're going to be using IntelliJ IDEA. This is not necessary, but recommended. I prefer IntelliJ IDEA, and if you're a student with a `.edu` or similar email, you can get it for free on their website.
+We're going to be using IntelliJ IDEA. Both "Community" and "Ultimate" edition will work.
+
+This is not necessary, but recommended. I prefer IntelliJ IDEA, and if you're a student with a `.edu` or similar email, you can get the "Ultimate" edition for free on their website.
+
+# Debugging
 
 # Java
 
 # Gradle
+
+# Neoforged
+
+# sample `onBlockBreak`

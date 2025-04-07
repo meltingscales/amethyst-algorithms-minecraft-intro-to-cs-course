@@ -1,5 +1,5 @@
 {
-  "itemGroup.amethystalgorithmsproject2": "Example Mod Tab",
-  "block.amethystalgorithmsproject2.example_block": "Example Block",
-  "item.amethystalgorithmsproject2.example_item": "Example Item"
+  "itemGroup.amethystalgorithms": "Example Mod Tab",
+  "block.amethystalgorithms.example_block": "Example Block",
+  "item.amethystalgorithms.example_item": "Example Item"
 }
