@@ -64,7 +64,7 @@ TODO add <https://github.com/meltingscales/examples/tree/master/java/>, incorpor
   - `String playerName = player.getName();`
   - `int playerX = player.getPosition().getX();`
   - `boolean isDay = world.isDaytime();`
-1.5: order of evaluation
+- 1.5: order of evaluation
 
 
 <!--
