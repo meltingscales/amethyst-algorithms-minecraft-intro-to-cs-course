@@ -44,7 +44,9 @@ It's dead simple to debug while coding with an IDE!
 
 In the "Gutter", the left-hand tract of screen space to the right of line numbers in IDEA, you can set what's called a "breakpoint".
 
-If you set one, and run the "Client" run configuration in Debug mode, the game will PAUSE right before it executes the code targeted by a breakpoint! Try it out!
+If you set one, and run the "Client" run configuration in Debug mode, the game will PAUSE right before it executes the code targeted by a breakpoint! 
+
+Try it out! In `DirtDropsGold.java:L26` (line 26), add a breakpoint, run `Client` in debug, join a world, and break a dirt block.
 
 ```text
   vvv -- Right there is the gutter.
@@ -53,6 +55,16 @@ If you set one, and run the "Client" run configuration in Debug mode, the game w
 03 | public static void main(String[] args) {
 04 |     System.out.println("Hello world!");
 05 | }
+```
+
+# Debugging part 2
+
+Another neat feature of Debug mode is the ability to execute arbitrary Java code while the game is running.
+
+Remove all your breakpoints, and try running some of these expressions in the `Threads & Variables > Evaluate expression` field:
+
+```java
+//TODO: Examples go here for debug statements.
 ```
 
 # Java
