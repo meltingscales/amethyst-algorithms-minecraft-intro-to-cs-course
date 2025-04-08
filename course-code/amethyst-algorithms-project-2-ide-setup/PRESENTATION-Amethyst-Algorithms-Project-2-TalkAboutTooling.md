@@ -59,12 +59,21 @@ Try it out! In `DirtDropsGold.java:L26` (line 26), add a breakpoint, run `Client
 
 # Debugging part 2
 
-Another neat feature of Debug mode is the ability to execute arbitrary Java code while the game is running.
+Another neat feature of Debug mode is the ability to execute arbitrary Java code while the game is paused.
 
-Remove all your breakpoints, and try running some of these expressions in the `Threads & Variables > Evaluate expression` field:
+Create a breakpoint inside `DirtDropsGold.java`, and try running some of these expressions in the `Threads & Variables > Evaluate expression` field:
+
+Alternatively, you can hit CTRL-SHIFT-P to bring up the command palette, and type in `Debugging actions` or `Evaluate expression`.
+
+You can use `F5` to resume the program execution.
 
 ```java
-//TODO: Examples go here for debug statements.
+Minecraft.getInstance().mouseHandler.releaseMouse()
+Minecraft.getInstance().player.getName()
+Minecraft.getInstance().player.position.x
+world.isDaytime()
+player.sendMessage("Hello, Minecraft!")
+world.setBlock(player.getPosition().up(), Blocks.DIAMOND_BLOCK)
 ```
 
 # Java
