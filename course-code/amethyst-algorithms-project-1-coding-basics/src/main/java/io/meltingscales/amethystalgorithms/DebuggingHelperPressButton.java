@@ -1,6 +1,7 @@
 package io.meltingscales.amethystalgorithms;
 
 import com.mojang.blaze3d.platform.InputConstants;
+import com.mojang.logging.LogUtils;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
@@ -10,9 +11,12 @@ import net.neoforged.jarjar.nio.util.Lazy;
 import net.neoforged.neoforge.client.event.InputEvent;
 import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 import org.lwjgl.glfw.GLFW;
+import org.slf4j.Logger;
 
 @EventBusSubscriber(modid = AmethystAlgorithms.MODID, bus = EventBusSubscriber.Bus.GAME)
 public class DebuggingHelperPressButton {
+
+  private static final Logger LOGGER = LogUtils.getLogger();
 
   public static final Lazy<KeyMapping> KEY_MAPPING_DEBUG =
       Lazy.of(
@@ -25,13 +29,14 @@ public class DebuggingHelperPressButton {
 
   // Event is on the mod event bus only on the physical client
   @SubscribeEvent
-  public void registerBindings(RegisterKeyMappingsEvent event) {
+  public static void registerBindings(RegisterKeyMappingsEvent event) {
     event.register(KEY_MAPPING_DEBUG.get());
   }
 
   @SubscribeEvent
   public void onInput(InputEvent.Key event) {
     if (KEY_MAPPING_DEBUG.get().isDown()) {
+      LOGGER.info("Debug button pressed - " + KEY_MAPPING_DEBUG.get().getKey().getName());
       pressDebugButton(event);
     }
   }
@@ -42,7 +47,7 @@ public class DebuggingHelperPressButton {
     String myName = Minecraft.getInstance().player.getName().getString();
 
     // Here, we print the player's current name.
-    System.out.println("My name is: " + myName);
+    LOGGER.info("My name is: {}", myName);
 
     // These are another few variable assignments.
     double myX = Minecraft.getInstance().player.getX();
@@ -50,7 +55,7 @@ public class DebuggingHelperPressButton {
     double myZ = Minecraft.getInstance().player.getZ();
 
     // We can print multiple things on one line!
-    System.out.println("My x,y,z are: " + myX + "," + myY + "," + myZ);
+    LOGGER.info("My x,y,z are: {},{},{}", myX, myY, myZ);
 
     // Spawn a diamond block 10 blocks above the player's head.
     // We have to use what's called a "typecast" here.
@@ -68,5 +73,7 @@ public class DebuggingHelperPressButton {
             aboveHeadPos,
             net.minecraft.world.level.block.Blocks.DIAMOND_BLOCK.defaultBlockState(),
             3);
+
+    LOGGER.info("Just set " + aboveHeadPos.toString() + " to diamond block");
   }
 }

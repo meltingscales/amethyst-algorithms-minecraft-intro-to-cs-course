@@ -40,3 +40,10 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+# minecraft crust
+run/logs/
+run/downloads/
+run/crash-reports/
+run/saves
+run/usercache.json
