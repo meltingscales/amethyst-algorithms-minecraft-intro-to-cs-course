@@ -107,3 +107,4 @@ TODO add <https://github.com/meltingscales/examples/tree/master/java/>, incorpor
 - [Modding By Kaupenjoe: Minecraft Modding 1.20.X for Forge](https://www.udemy.com/course/minecraft-modding-120x-for-forge)
   - [course code](https://github.com/Kaupenjoe/Forge-Course-1.20.X)
 - over 20,000 hours into this glorious game
+- [Applied Energistics 2 mod, and studying its code to understand how to use NeoForged](https://github.com/AppliedEnergistics/Applied-Energistics-2)
