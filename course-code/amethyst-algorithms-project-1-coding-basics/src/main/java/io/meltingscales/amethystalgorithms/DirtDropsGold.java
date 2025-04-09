@@ -15,12 +15,8 @@ public class DirtDropsGold {
     // Get the block state and position
     BlockState blockState = event.getState();
     BlockPos blockPos = event.getPos();
-    // Check if the block being broken is the one you're interested in
-    if (blockState.getBlock() == Blocks.STONE) {
-      // Do something when a stone block is broken
-      System.out.println("Stone block broken at: " + blockPos);
-    }
 
+    // Check if the block being broken is the one you're interested in
     if (blockState.getBlock() == Blocks.DIRT) {
 
       System.out.println("Dirt block broken at: " + blockPos);

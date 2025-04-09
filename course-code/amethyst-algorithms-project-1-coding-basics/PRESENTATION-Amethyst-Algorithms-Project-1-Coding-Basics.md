@@ -54,8 +54,23 @@ If using Linux, this will depend. I recommend Ubuntu for beginners.
     - [Windows Java 21](https://community.chocolatey.org/packages/openjdk/21.0.0)
     - [Linux/OSX Java 21](https://askubuntu.com/a/1492589)
 
+
+
+# Git setup
+
+# Java setup
+
 # IDE setup
 
-First, we're going to set up your IDE.
+Next, we're going to set up your IDE.
 
-1. Clone the repository 
+# Basics of Java code: Syntax
+
+Let's go to ``
+
+# Basics of Java code: Variables
+
+# Basics of Java code: Mod Annotations
+
+# Basics of Java code: Syntax
+
