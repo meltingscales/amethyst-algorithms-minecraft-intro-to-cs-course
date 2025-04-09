@@ -3,17 +3,18 @@ package io.meltingscales.amethystalgorithms;
 import com.mojang.blaze3d.platform.InputConstants;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
-import net.neoforged.bus.api.Event;
+import net.minecraft.core.BlockPos;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.jarjar.nio.util.Lazy;
+import net.neoforged.neoforge.client.event.InputEvent;
 import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 import org.lwjgl.glfw.GLFW;
 
 @EventBusSubscriber(modid = AmethystAlgorithms.MODID, bus = EventBusSubscriber.Bus.GAME)
 public class DebuggingHelperPressButton {
 
-  public static final Lazy<KeyMapping> KEY_MAPPING =
+  public static final Lazy<KeyMapping> KEY_MAPPING_DEBUG =
       Lazy.of(
           () ->
               new KeyMapping(
@@ -25,11 +26,17 @@ public class DebuggingHelperPressButton {
   // Event is on the mod event bus only on the physical client
   @SubscribeEvent
   public void registerBindings(RegisterKeyMappingsEvent event) {
-    event.register(KEY_MAPPING.get());
+    event.register(KEY_MAPPING_DEBUG.get());
   }
 
-  //TODO what do I annotate this with to detect them pressing "B"?
-  public static void pressDebugButton(Event event) {
+  @SubscribeEvent
+  public void onInput(InputEvent.Key event) {
+    if (KEY_MAPPING_DEBUG.get().isDown()) {
+      pressDebugButton(event);
+    }
+  }
+
+  public static void pressDebugButton(InputEvent.Key event) {
 
     // This is an example of a variable assignment.
     String myName = Minecraft.getInstance().player.getName().getString();
@@ -51,8 +58,15 @@ public class DebuggingHelperPressButton {
     int aboveHeadY = (int) (myY + 10);
     int aboveHeadZ = (int) myZ;
 
-    //Set the block.
-//    event. //TODO
+    BlockPos aboveHeadPos = new BlockPos(aboveHeadX, aboveHeadY, aboveHeadZ);
 
+    // Set the block.
+    Minecraft.getInstance()
+        .player
+        .level()
+        .setBlock(
+            aboveHeadPos,
+            net.minecraft.world.level.block.Blocks.DIAMOND_BLOCK.defaultBlockState(),
+            3);
   }
 }
