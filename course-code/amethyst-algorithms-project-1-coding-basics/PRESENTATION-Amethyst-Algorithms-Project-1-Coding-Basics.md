@@ -40,14 +40,22 @@ If you're age 15+, like Minecraft, and want to learn programming, you should giv
 
 You'll need to install a few tools first!
 
+If using Windows, I highly recommend using Chocolatey `choco` to install packages. It is a fantastic package manager similar to `apt` or `yum`.
+
+- [choco](https://docs.chocolatey.org/en-us/choco/setup/)
+
+If using Linux, this will depend. I recommend Ubuntu for beginners.
+
 1. [Install IntelliJ IDEA](https://www.jetbrains.com/idea/)
+   - [Windows JetBrains Toolbox](https://community.chocolatey.org/packages/jetbrainstoolbox)
+   - [Linux/OSX JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
 2. [Install Git](https://git-scm.com/)
 3. Install Java Development Kit 21
     - [Windows Java 21](https://community.chocolatey.org/packages/openjdk/21.0.0)
-    - [Linux/OSX Java 21](https://www.oracle.com/java/technologies/downloads/)
+    - [Linux/OSX Java 21](https://askubuntu.com/a/1492589)
 
 # IDE setup
 
 First, we're going to set up your IDE.
 
-1. Clone 
+1. Clone the repository 
