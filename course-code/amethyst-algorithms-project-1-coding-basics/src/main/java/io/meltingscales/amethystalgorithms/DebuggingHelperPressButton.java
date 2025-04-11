@@ -6,6 +6,7 @@ import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.jarjar.nio.util.Lazy;
@@ -13,11 +14,16 @@ import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 import net.neoforged.neoforge.client.settings.KeyConflictContext;
 import net.neoforged.neoforge.client.settings.KeyModifier;
+import net.neoforged.neoforge.common.NeoForge;
 import org.lwjgl.glfw.GLFW;
 import org.slf4j.Logger;
 
 @EventBusSubscriber(modid = AmethystAlgorithms.MODID, bus = EventBusSubscriber.Bus.MOD)
 public class DebuggingHelperPressButton {
+
+  public DebuggingHelperPressButton(IEventBus modBus) {
+    NeoForge.EVENT_BUS.addListener(DebuggingHelperPressButton::onClientTick);
+  }
 
   private static final Logger LOGGER = LogUtils.getLogger();
 
@@ -39,13 +45,13 @@ public class DebuggingHelperPressButton {
   }
 
   // Event is on the NeoForge event bus only on the physical client
-  public void onClientTick(ClientTickEvent.Post event) {
+  public static void onClientTick(ClientTickEvent.Post event) {
     while (KEY_MAPPING_DEBUG.get().consumeClick()) {
-      pressDebugButton(event);
+      inGameEventDemo(event);
     }
   }
 
-  public static void pressDebugButton(ClientTickEvent.Post event) {
+  public static void inGameEventDemo(ClientTickEvent.Post event) {
 
     // This is an example of a variable assignment.
     String myName = Minecraft.getInstance().player.getName().getString();
