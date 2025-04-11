@@ -6,7 +6,6 @@ import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.jarjar.nio.util.Lazy;
@@ -14,16 +13,15 @@ import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 import net.neoforged.neoforge.client.settings.KeyConflictContext;
 import net.neoforged.neoforge.client.settings.KeyModifier;
-import net.neoforged.neoforge.common.NeoForge;
 import org.lwjgl.glfw.GLFW;
 import org.slf4j.Logger;
 
 @EventBusSubscriber(modid = AmethystAlgorithms.MODID, bus = EventBusSubscriber.Bus.MOD)
-public class DebuggingHelperPressButton {
+public class SimpleButtonPressDemo {
 
-  public DebuggingHelperPressButton(IEventBus modBus) {
-    NeoForge.EVENT_BUS.addListener(DebuggingHelperPressButton::onClientTick);
-  }
+  //  public DebuggingHelperPressButton(IEventBus modBus) {
+  //    NeoForge.EVENT_BUS.addListener(DebuggingHelperPressButton::onClientTick);
+  //  }
 
   private static final Logger LOGGER = LogUtils.getLogger();
 
