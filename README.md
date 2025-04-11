@@ -103,8 +103,12 @@ TODO add <https://github.com/meltingscales/examples/tree/master/java/>, incorpor
 
 ### project 5: aside: how can we learn more about making mods? (discord/StackOverflow/other OSS)
 
-## inspiration
+## inspiration/learning
+- over 20,000 hours into this glorious game
 - [Modding By Kaupenjoe: Minecraft Modding 1.20.X for Forge](https://www.udemy.com/course/minecraft-modding-120x-for-forge)
   - [course code](https://github.com/Kaupenjoe/Forge-Course-1.20.X)
-- over 20,000 hours into this glorious game
 - [Applied Energistics 2 mod, and studying its code to understand how to use NeoForged](https://github.com/AppliedEnergistics/Applied-Energistics-2)
+- [Botania](https://github.com/VazkiiMods/Botania)
+- [NeoForged Keymappings](https://docs.neoforged.net/docs/misc/keymappings/)
+- [NeoForged Events](https://docs.neoforged.net/docs/concepts/events/#registering-an-event-handler)
+- [hfbpOrbMod](https://github.com/meltingscales/hfbpOrbMod)
