@@ -1,6 +1,8 @@
 package io.meltingscales.amethystalgorithms;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
@@ -22,17 +24,33 @@ public class DirtDropsGold {
       System.out.println("Dirt block broken at: " + blockPos);
       System.out.println("Going to drop a gold ingot");
 
+      int blockX = blockPos.getX();
+      int blockY = blockPos.getY();
+      int blockZ = blockPos.getZ();
+
+      ItemStack oneGoldIngot =
+          new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.GOLD_INGOT);
+
+      ItemStack fourClay =
+          new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.CLAY_BALL, 4);
+
       // drop a gold ingot as a test
       event
           .getLevel()
           .addFreshEntity(
               new net.minecraft.world.entity.item.ItemEntity(
                   (Level) event.getLevel(),
-                  blockPos.getX() + 0.5,
-                  blockPos.getY() + 0.5,
-                  blockPos.getZ() + 0.5,
-                  new net.minecraft.world.item.ItemStack(
-                      net.minecraft.world.item.Items.GOLD_INGOT)));
+                  blockX + 0.5,
+                  blockY + 0.5,
+                  blockZ + 0.5,
+                  oneGoldIngot));
+
+      // drop four clay 2 blocks above the dirt
+      event
+          .getLevel()
+          .addFreshEntity(
+              new ItemEntity(
+                  (Level) event.getLevel(), blockX + 0.5, blockY + 2.5, blockZ + 0.5, fourClay));
     }
   }
 }

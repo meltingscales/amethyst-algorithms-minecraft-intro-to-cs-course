@@ -54,19 +54,27 @@ If using Linux, this will depend. I recommend Ubuntu for beginners.
     - [Windows Java 21](https://community.chocolatey.org/packages/openjdk/21.0.0)
     - [Linux/OSX Java 21](https://askubuntu.com/a/1492589)
 
-
-
 # Git setup
 
+I'll assume you've installed Git. You just need to run the below:
+1. Open a terminal and `cd` to the place you'd like the repository to live.
+2. Run `git clone https://github.com/meltingscales/amethyst-algorithms-minecraft-intro-to-cs-course`
+
 # Java setup
+
+Nothing to be done! Just install JDK 21 (not JRE 21).
 
 # IDE setup
 
 Next, we're going to set up your IDE.
 
-# Basics of Java code: Syntax
+(Live demo: Henry shows you how to set it up and import)
 
-Let's go to ``
+# Basics of Java code: Syntax 1
+
+Let's go to `/src/main/java/io/meltingscales/amethystalgorithms/DirtDropsGold.java` in our editor!
+
+
 
 # Basics of Java code: Variables
 

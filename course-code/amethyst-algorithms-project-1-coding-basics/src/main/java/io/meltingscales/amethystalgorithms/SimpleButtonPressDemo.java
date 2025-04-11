@@ -72,17 +72,17 @@ public class SimpleButtonPressDemo {
     int aboveHeadY = (int) (playerBlockY + 10);
     int aboveHeadZ = (int) playerBlockZ;
 
-    BlockPos aboveHeadPos = new BlockPos(aboveHeadX, aboveHeadY, aboveHeadZ);
+    BlockPos aboveHeadPosition = new BlockPos(aboveHeadX, aboveHeadY, aboveHeadZ);
 
     // Set the block.
     Minecraft.getInstance()
         .player
         .level()
         .setBlock(
-            aboveHeadPos,
+            aboveHeadPosition,
             net.minecraft.world.level.block.Blocks.DIAMOND_BLOCK.defaultBlockState(),
             3);
 
-    LOGGER.info("Just set " + aboveHeadPos.toString() + " to diamond block");
+    LOGGER.info("Just set " + aboveHeadPosition.toString() + " to diamond block");
   }
 }
