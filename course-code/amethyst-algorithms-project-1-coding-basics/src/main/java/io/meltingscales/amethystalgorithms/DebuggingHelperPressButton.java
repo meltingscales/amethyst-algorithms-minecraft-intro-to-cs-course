@@ -5,15 +5,18 @@ import com.mojang.logging.LogUtils;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.jarjar.nio.util.Lazy;
-import net.neoforged.neoforge.client.event.InputEvent;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
+import net.neoforged.neoforge.client.settings.KeyConflictContext;
+import net.neoforged.neoforge.client.settings.KeyModifier;
 import org.lwjgl.glfw.GLFW;
 import org.slf4j.Logger;
 
-@EventBusSubscriber(modid = AmethystAlgorithms.MODID, bus = EventBusSubscriber.Bus.GAME)
+@EventBusSubscriber(modid = AmethystAlgorithms.MODID, bus = EventBusSubscriber.Bus.MOD)
 public class DebuggingHelperPressButton {
 
   private static final Logger LOGGER = LogUtils.getLogger();
@@ -23,6 +26,8 @@ public class DebuggingHelperPressButton {
           () ->
               new KeyMapping(
                   "key.amethystalgorithms.debuggingHelper",
+                  KeyConflictContext.UNIVERSAL,
+                  KeyModifier.NONE,
                   InputConstants.Type.KEYSYM,
                   GLFW.GLFW_KEY_B,
                   "key.categories.misc"));
@@ -33,21 +38,25 @@ public class DebuggingHelperPressButton {
     event.register(KEY_MAPPING_DEBUG.get());
   }
 
-  @SubscribeEvent
-  public void onInput(InputEvent.Key event) {
-    if (KEY_MAPPING_DEBUG.get().isDown()) {
-      LOGGER.info("Debug button pressed - " + KEY_MAPPING_DEBUG.get().getKey().getName());
+  // Event is on the NeoForge event bus only on the physical client
+  public void onClientTick(ClientTickEvent.Post event) {
+    while (KEY_MAPPING_DEBUG.get().consumeClick()) {
       pressDebugButton(event);
     }
   }
 
-  public static void pressDebugButton(InputEvent.Key event) {
+  public static void pressDebugButton(ClientTickEvent.Post event) {
 
     // This is an example of a variable assignment.
     String myName = Minecraft.getInstance().player.getName().getString();
 
     // Here, we print the player's current name.
     LOGGER.info("My name is: {}", myName);
+
+    // Send a chat message.
+    Minecraft.getInstance()
+        .player
+        .sendSystemMessage(Component.empty().append("Thank you for pressing the debug button!"));
 
     // These are another few variable assignments.
     double myX = Minecraft.getInstance().player.getX();
