@@ -50,7 +50,11 @@ public class DirtDropsGold {
           .getLevel()
           .addFreshEntity(
               new ItemEntity(
-                  (Level) event.getLevel(), blockX + 0.5, blockY + 2.5, blockZ + 0.5, fourClay));
+                  (Level) event.getLevel(),
+                      blockX + 0.5,
+                      blockY + 2.5,
+                      blockZ + 0.5,
+                      fourClay));
     }
   }
 }
