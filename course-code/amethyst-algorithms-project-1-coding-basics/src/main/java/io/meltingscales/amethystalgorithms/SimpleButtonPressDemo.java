@@ -19,17 +19,13 @@ import org.slf4j.Logger;
 @EventBusSubscriber(modid = AmethystAlgorithms.MODID, bus = EventBusSubscriber.Bus.MOD)
 public class SimpleButtonPressDemo {
 
-  //  public DebuggingHelperPressButton(IEventBus modBus) {
-  //    NeoForge.EVENT_BUS.addListener(DebuggingHelperPressButton::onClientTick);
-  //  }
-
   private static final Logger LOGGER = LogUtils.getLogger();
 
-  public static final Lazy<KeyMapping> KEY_MAPPING_DEBUG =
+  public static final Lazy<KeyMapping> KEY_MAPPING_BUTTONPRESSDEMO =
       Lazy.of(
           () ->
               new KeyMapping(
-                  "key.amethystalgorithms.debuggingHelper",
+                  "key.amethystalgorithms.simpleButtonPressDemo",
                   KeyConflictContext.UNIVERSAL,
                   KeyModifier.NONE,
                   InputConstants.Type.KEYSYM,
@@ -39,12 +35,12 @@ public class SimpleButtonPressDemo {
   // Event is on the mod event bus only on the physical client
   @SubscribeEvent
   public static void registerBindings(RegisterKeyMappingsEvent event) {
-    event.register(KEY_MAPPING_DEBUG.get());
+    event.register(KEY_MAPPING_BUTTONPRESSDEMO.get());
   }
 
   // Event is on the NeoForge event bus only on the physical client
   public static void onClientTick(ClientTickEvent.Post event) {
-    while (KEY_MAPPING_DEBUG.get().consumeClick()) {
+    while (KEY_MAPPING_BUTTONPRESSDEMO.get().consumeClick()) {
       inGameEventDemo(event);
     }
   }
@@ -63,18 +59,18 @@ public class SimpleButtonPressDemo {
         .sendSystemMessage(Component.empty().append("Thank you for pressing the debug button!"));
 
     // These are another few variable assignments.
-    double myX = Minecraft.getInstance().player.getX();
-    double myY = Minecraft.getInstance().player.getY();
-    double myZ = Minecraft.getInstance().player.getZ();
+    double playerBlockX = Minecraft.getInstance().player.getBlockX();
+    double playerBlockY = Minecraft.getInstance().player.getBlockY();
+    double playerBlockZ = Minecraft.getInstance().player.getBlockZ();
 
     // We can print multiple things on one line!
-    LOGGER.info("My x,y,z are: {},{},{}", myX, myY, myZ);
+    LOGGER.info("My x,y,z are: {},{},{}", playerBlockX, playerBlockY, playerBlockZ);
 
     // Spawn a diamond block 10 blocks above the player's head.
     // We have to use what's called a "typecast" here.
-    int aboveHeadX = (int) myX;
-    int aboveHeadY = (int) (myY + 10);
-    int aboveHeadZ = (int) myZ;
+    int aboveHeadX = (int) playerBlockX;
+    int aboveHeadY = (int) (playerBlockY + 10);
+    int aboveHeadZ = (int) playerBlockZ;
 
     BlockPos aboveHeadPos = new BlockPos(aboveHeadX, aboveHeadY, aboveHeadZ);
 
