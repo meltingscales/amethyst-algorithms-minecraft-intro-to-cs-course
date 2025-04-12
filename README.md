@@ -91,7 +91,6 @@ TODO add <https://github.com/meltingscales/examples/tree/master/java/>, incorpor
 - how do we debug?
 - what is gradle?
 - what is neoforged?
-- sample `onBlockBreak` code and gold ingots
 
 ### project 3: let's make our own tree!
 
