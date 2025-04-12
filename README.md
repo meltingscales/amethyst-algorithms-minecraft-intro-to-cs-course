@@ -103,6 +103,18 @@ TODO add <https://github.com/meltingscales/examples/tree/master/java/>, incorpor
 
 ### project 5: aside: how can we learn more about making mods? (discord/StackOverflow/other OSS)
 
+### project 9: sidetrack: How to run your own server
+
+- docker
+- VMs
+- locally hosted
+- port forwarding, what is it?
+- how to test port forwarding: https://mcsrvstat.us/server/minecraft.henrypost.net
+- how to set up your own domain
+- alternative: use tailscale
+- how to do backups: plugins? cron jobs?
+- how to run a modpack server?
+
 ## inspiration/learning
 - over 20,000 hours into this glorious game
 - [Modding By Kaupenjoe: Minecraft Modding 1.20.X for Forge](https://www.udemy.com/course/minecraft-modding-120x-for-forge)
