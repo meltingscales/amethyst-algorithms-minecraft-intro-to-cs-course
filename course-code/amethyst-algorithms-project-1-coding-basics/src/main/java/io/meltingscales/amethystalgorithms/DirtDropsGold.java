@@ -20,7 +20,7 @@ public class DirtDropsGold {
 
     // Check if the block being broken is the one you're interested in
     if (blockState.getBlock() == Blocks.DIRT) {
-      
+
       System.out.println("Dirt block broken at: " + blockPos);
       System.out.println("Going to drop a gold ingot");
 

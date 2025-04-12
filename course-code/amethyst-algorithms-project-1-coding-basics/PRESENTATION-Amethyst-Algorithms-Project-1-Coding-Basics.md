@@ -1,8 +1,10 @@
 ---
-title: "Amethyst Algorithms Project 1: IDE Setup"
-author: "Henry Post"
-institute: "Drakonix Industries, LLC"
-topic: "Amethyst Algorithms Project 1: IDE Setup"
+title: |
+      Amethyst Algorithms Project 1: Coding Basics
+topic: "Amethyst Algorithms Project 1: Coding Basics"
+author: |
+   Henry Post
+institute: "Drakonix Systems, LLC"
 theme: "Frankfurt"
 colortheme: "beaver"
 fonttheme: "professionalfonts"
@@ -12,7 +14,7 @@ urlcolor: red
 linkstyle: bold
 aspectratio: 169
 #titlegraphic: img/aleph0.png
-#logo: img/aleph0-small.png
+#logo: ../../drakonix-systems-small.png
 date: March 31, 2025
 lang: en-US
 section-titles: true
@@ -80,7 +82,7 @@ Java syntax can be broken up into a few distinct types. We'll cover them in the 
 - `L14`: a class declaration! `public class DirtDropsGold {...}`.
 - `L16`: A method (also function) declaration! `onBlockBreak(...){...}`
 - `L27`: A variable declaration! `int blockX = blockPos.getX();`
-- z
+- z: An `if` statement! 
 - a
 - b
 - c
