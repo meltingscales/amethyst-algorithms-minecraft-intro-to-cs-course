@@ -74,6 +74,53 @@ Next, we're going to set up your IDE.
 
 Let's go to `/src/main/java/io/meltingscales/amethystalgorithms/DirtDropsGold.java` in our editor!
 
+Java syntax can be broken up into a few distinct types. We'll cover them in the next slide.
+
+- `L13`: an annotation! `@EventBusSubscriber(...)`
+- `L14`: a class declaration! `public class DirtDropsGold {...}`.
+- `L16`: A method (also function) declaration! `onBlockBreak(...){...}`
+- `L27`: A variable declaration! `int blockX = blockPos.getX();`
+- z
+- a
+- b
+- c
+
+# Basics of Java code: Syntax 2: Annotations
+
+Annotations are ways to store extra data ("metadata", literally "data about data" ) about a method (function), 
+variable, or class.
+
+In NeoForged, they are very powerful and mean specific things. They tell the (classloader?) to hook specific functions
+into your mod.
+
+[//]: # (TODO make this more descriptive?)
+
+```java
+@EventBusSubscriber(modid = AmethystAlgorithms.MODID, bus = EventBusSubscriber.Bus.GAME)
+public class DirtDropsGold {
+
+  @SubscribeEvent(receiveCanceled = true)
+  public static void onBlockBreak(BlockEvent.BreakEvent event) {
+    // get broken block position
+     // 
+  }
+}
+
+```
+
+# Basics of Java code: Syntax 3: Class declarations
+# Basics of Java code: Syntax 4: Function/method declarationsx
+# Basics of Java code: Syntax 5: Variable declarations
+# Basics of Java code: Syntax 6: `if` statements
+# Basics of Java code: Syntax 7: `boolean` expressions
+# Basics of Java code: Syntax 8: method/function invocations
+# Basics of Java code: Syntax 9: "method chaining"
+
+It looks pretty neat. Method chaining is a useful technique that lets you easily modify the state of an object.
+
+It works because the method just repeatedly returns `this`, meaning the object that is currently running the method.
+
+
 
 
 # Basics of Java code: Variables
