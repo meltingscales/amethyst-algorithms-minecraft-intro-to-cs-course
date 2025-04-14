@@ -10,17 +10,21 @@ public class CodingBasicsConstructors {
       int age;
       String color;
 
+      // declaring a "default" (no arguments) constructor
       public Animal() {}
 
+      // declaring a constructor with 1 argument
       public Animal(String name) {
         this.name = name;
       }
 
+      // declaring a constructor with 2 arguments
       public Animal(String name, int age) {
         this.name = name;
         this.age = age;
       }
 
+      // declaring a constructor with 3 arguments
       public Animal(String name, int age, String color) {
         this.name = name;
         this.age = age;

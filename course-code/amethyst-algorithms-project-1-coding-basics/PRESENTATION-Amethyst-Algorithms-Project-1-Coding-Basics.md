@@ -34,27 +34,33 @@ This presentation was made using Markdown and Pandoc with the "beamer" template.
 
 # What is this?
 
-Amethyst Algorithms is a course aimed at smart highschoolers or average college students, meant to teach you how to do software programming using Minecraft and NeoForged.
+Amethyst Algorithms is a course aimed at people aged 15 or older, meant to teach you how to do software programming using Minecraft and NeoForged.
 
-If you're age 15+, like Minecraft, and want to learn programming, you should give this course a try.
+If you're aged 15 or older, like Minecraft, and want to learn programming, you should give this course a try.
 
 # Tooling setup
 
 You'll need to install a few tools first!
 
-If using Windows, I highly recommend using Chocolatey `choco` to install packages. It is a fantastic package manager similar to `apt` or `yum`.
+If using Windows, I highly recommend using `winget` to install packages. It is a fantastic package manager similar to `apt` or `yum`.
 
-- [choco](https://docs.chocolatey.org/en-us/choco/setup/)
+- [winget](https://winget.run/)
 
-If using Linux, this will depend. I recommend Ubuntu for beginners.
+[//]: # (Thank you Hayden, for this suggestion.)
+
+If using Linux, this will depend. I recommend Ubuntu for beginners, but I personally use NixOS.
 
 1. [Install IntelliJ IDEA](https://www.jetbrains.com/idea/)
-   - [Windows JetBrains Toolbox](https://community.chocolatey.org/packages/jetbrainstoolbox)
+   - [Windows JetBrains Toolbox](https://winget.run/pkg/JetBrains/Toolbox)
    - [Linux/OSX JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/)
 2. [Install Git](https://git-scm.com/)
-3. Install Java Development Kit 21
-    - [Windows Java 21](https://community.chocolatey.org/packages/openjdk/21.0.0)
-    - [Linux/OSX Java 21](https://askubuntu.com/a/1492589)
+    - [Git on Windows](https://winget.run/pkg/Git/Git) 
+    - [Git on Linux](https://git-scm.com/)
+    - [Git on OSX](https://gist.github.com/kamermanpr/23bc20180dc277bc8043558f0c22f8a9)
+3. [Install Java Development Kit 21](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html)
+    - [JDK 21 on Windows](https://learn.microsoft.com/en-us/java/openjdk/download#openjdk-21)
+    - [JDK 21 on Linux](https://askubuntu.com/a/1492589)
+    - [JDK 21 on OSX](https://formulae.brew.sh/formula/openjdk@21)
 
 # Git setup
 
@@ -63,19 +69,28 @@ I'll assume you've installed Git. You just need to run the below:
 1. Open a terminal and `cd` to the place you'd like the repository to live.  
 2. Run `git clone https://github.com/meltingscales/amethyst-algorithms-minecraft-intro-to-cs-course`  
 
+```
+> INSTRUCTOR: Clone the repo fresh.
+```
+
 # Java setup
 
 Just install JDK 21 (not JRE 21).
+
+```
+> INSTRUCTOR: Install JDK 21.
+```
 
 # IDE setup
 
 Next, we're going to set up your IDE.
 
-(Live demo: Henry shows you how to set it up and import)
+```
+> INSTRUCTOR: Set up a fresh IDE project after cloning, and 
+  import `amethyst-algorithms-project-1-coding-basics` with IntelliJ IDEA.
+```
 
-TL;DR: Import `amethyst-algorithms-project-1-coding-basics` with IntelliJ IDEA.
-
-# Basics of Java code: Syntax: Overview
+# \twemoji{star} Basics of Java code: Syntax: Overview
 
 Let's go to `/src/main/java/io/meltingscales/amethystalgorithms/DirtDropsGold.java` in our editor!
 
@@ -93,8 +108,8 @@ This is a "crash course" in Java syntax. We're going to learn just enough to sta
 - `L27`: A variable declaration! `int blockX = blockPos.getX();`
 - `L22`: An `if` statement! `if ( some_condition_is_true ) { do_some_action }`
 - `L22`: a `boolean` expression! `blockState.getBlock() == Blocks.DIRT`
-- `LXX`: passing arguments to a constructor! `xxx`
-- `LXX`: passing arguments to a function! `xxx`
+- `L43`: passing arguments to a constructor! `new ItemEntity((Level) level, blockX+0.5, blockY+0.5, blockZ+0.5)`
+- creating a constructor! (See below...)
 
 # \twemoji{star} Basics of Java code: Syntax: Function/method declarations 
 
@@ -103,7 +118,8 @@ Just like in algebra, i.e. `f(x,y) = x + (2 * y)`, a cornerstone of programming 
 I've found that most classes in Java over-focus on "Object-Oriented Programming" (OOP), but I've found that to be a 
 waste of time. So I'm not going to focus on it! 
 
-You may hear "Method" and "Function" used interchangeably. Just know that they both mean "A named piece of code that usually does something very specific".
+You may hear "Method" and "Function" used interchangeably. Just know that they both mean "A named piece of code that 
+usually does something very specific".
 
 ```java
 // File: /src/main/java/io/meltingscales/amethystalgorithms/DirtDropsGold.java
@@ -117,7 +133,7 @@ public static void onBlockBreak(BlockEvent.BreakEvent event) {
 > INSTRUCTOR: Talk about the code.
 ```
 
-# \twemoji{star} Basics of Java code: Constructors
+# \twemoji{star} Basics of Java code: Using constructors
 
 Constructors are just functions that return an "object", which is a collection of data.
 
@@ -137,7 +153,7 @@ ItemStack oneGoldIngot =
 > INSTRUCTOR: Talk about the code.
 ```
 
-# Basics of Java code: Annotations
+# \twemoji{star} Basics of Java code: Annotations
 
 Annotations are ways to store extra data ("metadata", literally "data about data" ) about a method (function), 
 variable, or class.
@@ -155,14 +171,31 @@ public class DirtDropsGold {
     // (...)
   }
 }
+```
 
+```
+> INSTRUCTOR: (Open `DirtDropsGold.java`, then open `CodingBasicsAnnotations{1..3}.java`).
+> INSTRUCTOR: Talk about the code.
 ```
 
 # Basics of Java code: Class declarations
 
-A "class" in Java is a way to store data in what are called "instance variables" (if non-`static`) or "class variables" (if `static`).
+A "class" in Java is a way to store data in what are called "instance variables" (if non-`static`) 
+or "class variables" (if `static`).
 
-Classes can also have functions called "methods"!
+Classes can also have functions called "methods", as we saw above.
+
+```java
+// File: /src/main/java/io/meltingscales/amethystalgorithms/DirtDropsGold.java
+public class DirtDropsGold {
+    // (...)
+}
+```
+
+```
+> INSTRUCTOR: (Open `DirtDropsGold.java`, then open `CodingBasicsClassDeclarations.java`).
+> INSTRUCTOR: Talk about the code.
+```
 
 # Basics of Java code: Variable declarations
 # Basics of Java code: `if` statements
@@ -172,3 +205,10 @@ Classes can also have functions called "methods"!
 # Basics of Java code: Mod Annotations
 # Basics of Java code: Syntax
 
+
+# notes
+[//]: # (TODO SentryMan: Chicken Jockey should be part of the example.)
+      [//]: # (Flint and steel)
+      [//]: # (I am steve)
+      [//]: # (The nether)
+      [//]: # (Amethyst Forest biome)

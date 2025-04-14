@@ -49,13 +49,9 @@ You'll learn basic Java syntax, how to set up an editor, how to run Java code, a
 - optimization
 - 3d models
 
-## course overview
+## ⭐ course overview
 
 ### project 1: coding basics
-
-if you already know this, please skip ahead.
-
-TODO add <https://github.com/meltingscales/examples/tree/master/java/>, incorporate it into lessons
 
 - 1.1: setup the IDE
 - 1.2: basic syntax that is ONLY related to minecraft
@@ -66,31 +62,15 @@ TODO add <https://github.com/meltingscales/examples/tree/master/java/>, incorpor
   - `boolean isDay = world.isDaytime();`
 - 1.5: order of evaluation
 
-
-<!--
-- 1.1: [java syntax](https://github.com/meltingscales/examples/blob/master/java/java-basics/src/JavaBasics.java)
-- 1.2: data types: str, float, list, array, char[]
-- 1.3: variables: local, global
-- 1.4: simple statements
-- 1.4a: order of evaluation
-- 1.5: advanced statements
-- 1.6: global functions
-- 1.7: member functions
-- 1.8: classes
-- 1.9: why should we use OOP?
-- 1.10: why is OOP bad sometimes?
-- 1.11: for loops
-- 1.12: while loops
-- 1.13: interfaces
-
--->
-
 ### project 2: talk about tooling
 
 - why are we using IntelliJ IDEA?
 - how do we debug?
 - what is gradle?
+- how do you run gradle targets? list targets? list dependencies?
+- what even is a dependency?
 - what is neoforged?
+  - how to get help with neoforged?
 
 ### project 3: let's make our own tree!
 

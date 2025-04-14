@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="amethyst-algorithms-project-2-ide-setup"></stringAttribute>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="net.neoforged.devlaunch.Main"></stringAttribute>
+    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value=" @/home/melty/Git/amethyst-algorithms-minecraft-intro-to-cs-course/course-code/amethyst-algorithms-project-2-ide-setup/build/moddev/gameTestServerRunProgramArgs.txt"></stringAttribute>
+    <stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value=" @/home/melty/Git/amethyst-algorithms-minecraft-intro-to-cs-course/course-code/amethyst-algorithms-project-2-ide-setup/build/moddev/gameTestServerRunVmArgs.txt -Dfml.modFolders=amethystalgorithms%%/home/melty/Git/amethyst-algorithms-minecraft-intro-to-cs-course/course-code/amethyst-algorithms-project-2-ide-setup/bin/main"></stringAttribute>
+    <stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="/home/melty/Git/amethyst-algorithms-minecraft-intro-to-cs-course/course-code/amethyst-algorithms-project-2-ide-setup/run"></stringAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.STOP_IN_MAIN" value="false"></booleanAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_ATTR_USE_ARGFILE" value="false"></booleanAttribute>
+</launchConfiguration>
