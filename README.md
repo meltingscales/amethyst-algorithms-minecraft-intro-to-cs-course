@@ -1,5 +1,8 @@
 # Amethyst Algorithms: Minecraft Intro to CS Course
 
+Note to myself: PAUSE this course and just make a mod called `AmethystShards`.
+Henry: You need to really understand how to write mods. `04-13-2025 HP`
+
 ![Amethyst Algorithms](amethyst-algorithms.png)
 
 my desire to teach and love of minecraft all rolled into one
@@ -52,6 +55,9 @@ You'll learn basic Java syntax, how to set up an editor, how to run Java code, a
 ## ⭐ course overview
 
 ### project 1: coding basics
+
+<!-- TODO: Steal from https://javabook.mccue.dev/classes/instances as it's very useful, and iterative -->
+<!-- Thank you to Ethan McCue! -->
 
 - 1.1: setup the IDE
 - 1.2: basic syntax that is ONLY related to minecraft
